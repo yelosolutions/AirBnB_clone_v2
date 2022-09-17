@@ -53,7 +53,6 @@ class TestHBNBCommand(unittest.TestCase):
         except IOError:
             pass
 
-
     def test_docstrings(self):
         """Check for docstrings."""
         self.assertIsNotNone(HBNBCommand.__doc__)

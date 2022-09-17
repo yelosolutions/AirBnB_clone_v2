@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""This is the city class"""
-from sqlalchemy.ext.declarative import declarative_base
+""" Defines  city class."""
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, Integer, String
-from sqlalchemy import ForeignKey
+from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
-from models.place import Place
 
 
 class City(BaseModel, Base):
-    """This is the class for City
+    """
+    Represents class.
     Attributes:
-        state_id: The state id
-        name: input name
+        __tablename__ (str): The name of the MySQL table.
+        state_id (str): The id of the state.
+        name (str): The name of the state.
+        places (sqlalchemy relationship): The User-Place relationship.
     """
     __tablename__ = "cities"
     name = Column(String(128), nullable=False)
-    state_id = Column(String(60), ForeignKey('states.id'), nullable=False)
-    places = relationship("Place", cascade='all, delete, delete-orphan',
-                          backref="cities")
+    state_id = Column(String(60), ForeignKey("states.id"), nullable=False)
+    places = relationship("Place", backref="cities", cascade="delete")
