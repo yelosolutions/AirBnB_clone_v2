@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fabfile that distributes an archive to web server 
+"""Fabfile that distributes an archive to web server
     using function do_deploy.
 """
 import os.path
