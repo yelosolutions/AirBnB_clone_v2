@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""
+""" Deletes out-of-date archives using do_clean
 do_pack(): Generates a .tgz archive from the
 contents of the web_static folder
 do_deploy(): Distributes an archive to a web server
