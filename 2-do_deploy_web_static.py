@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-# Fabfile that distributes an archive to web server
-# using function do_deploy.
+"""Fabfile that distributes an archive to web server 
+    using function do_deploy.
+"""
 import os.path
 from fabric.api import env
 from fabric.api import put
