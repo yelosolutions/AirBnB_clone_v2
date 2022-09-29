@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# sets up your web servers for the deployment of web_static
+# sets up the web servers for the deployment of web_static
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
@@ -10,7 +10,7 @@ echo "<html>
   <head>
   </head>
   <body>
-    Zebbylion Njau
+    Holberton School
   </body>
 </html>" > /data/web_static/releases/test/index.html
 ln -sf /data/web_static/releases/test /data/web_static/current
