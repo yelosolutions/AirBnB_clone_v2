@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Fabric script that distributes an archive to web servers using do_deploy
+Fabric script that generates a .tgz archive to web servers using do_pack
 """
 
 from datetime import datetime
