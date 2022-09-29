@@ -8,7 +8,10 @@ from models.engine.file_storage import FileStorage
 
 def clear_stream(stream: TextIO):
     """Clears the contents of a given stream
+<<<<<<< HEAD
 
+=======
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
     Args:
         stream (TextIO): The stream to clear.
     """
@@ -40,10 +43,15 @@ def reset_store(store: FileStorage, file_path='file.json'):
 
 def read_text_file(file_name):
     """Reads the contents of a given file.
+<<<<<<< HEAD
 
     Args:
         file_name (str): The name of the file to read.
 
+=======
+    Args:
+        file_name (str): The name of the file to read.
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
     Returns:
         str: The contents of the file if it exists.
     """
@@ -57,7 +65,10 @@ def read_text_file(file_name):
 
 def write_text_file(file_name, text):
     """Writes a text to a given file.
+<<<<<<< HEAD
 
+=======
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
     Args:
         file_name (str): The name of the file to write to.
         text (str): The content of the file.

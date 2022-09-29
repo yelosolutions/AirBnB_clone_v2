@@ -23,7 +23,11 @@ class FileStorage:
         """Adds new object to storage dictionary"""
         self.__objects.update(
             {obj.to_dict()['__class__'] + '.' + obj.id: obj}
+<<<<<<< HEAD
             )
+=======
+        )
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
 
     def save(self):
         """Saves storage dictionary to file"""
@@ -45,10 +49,17 @@ class FileStorage:
         from models.review import Review
 
         classes = {
+<<<<<<< HEAD
                     'BaseModel': BaseModel, 'User': User, 'Place': Place,
                     'State': State, 'City': City, 'Amenity': Amenity,
                     'Review': Review
                   }
+=======
+            'BaseModel': BaseModel, 'User': User, 'Place': Place,
+            'State': State, 'City': City, 'Amenity': Amenity,
+            'Review': Review
+        }
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
         try:
             temp = {}
             with open(self.__file_path, 'r') as f:

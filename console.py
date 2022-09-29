@@ -23,6 +23,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
 
     classes = {
+<<<<<<< HEAD
                'BaseModel': BaseModel, 'User': User, 'Place': Place,
                'State': State, 'City': City, 'Amenity': Amenity,
                'Review': Review
@@ -33,6 +34,18 @@ class HBNBCommand(cmd.Cmd):
              'max_guest': int, 'price_by_night': int,
              'latitude': float, 'longitude': float
             }
+=======
+        'BaseModel': BaseModel, 'User': User, 'Place': Place,
+        'State': State, 'City': City, 'Amenity': Amenity,
+        'Review': Review
+    }
+    dot_cmds = ['all', 'count', 'show', 'destroy', 'update']
+    types = {
+        'number_rooms': int, 'number_bathrooms': int,
+        'max_guest': int, 'price_by_night': int,
+        'latitude': float, 'longitude': float
+    }
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
 
     def preloop(self):
         """Prints if isatty is false"""
@@ -41,7 +54,10 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, line):
         """Reformat command line for advanced command syntax.
+<<<<<<< HEAD
 
+=======
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
         Usage: <class name>.<command>([<id> [<*args> or <**kwargs>]])
         (Brackets denote optional fields in usage example.)
         """
@@ -213,6 +229,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the show command """
         print("Shows an individual instance of a class")
         print("[Usage]: show <className> <objectId>\n")
+<<<<<<< HEAD
 
     def do_destroy(self, args):
         """ Destroys a specified object """
@@ -222,6 +239,17 @@ class HBNBCommand(cmd.Cmd):
         if c_id and ' ' in c_id:
             c_id = c_id.partition(' ')[0]
 
+=======
+
+    def do_destroy(self, args):
+        """ Destroys a specified object """
+        new = args.partition(" ")
+        c_name = new[0]
+        c_id = new[2]
+        if c_id and ' ' in c_id:
+            c_id = c_id.partition(' ')[0]
+
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
         if not c_name:
             print("** class name missing **")
             return
@@ -269,6 +297,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the all command """
         print("Shows all objects, or all of a class")
         print("[Usage]: all <className>\n")
+<<<<<<< HEAD
 
     def do_count(self, args):
         """Count current number of class instances"""
@@ -286,6 +315,25 @@ class HBNBCommand(cmd.Cmd):
         """ Updates a certain object with new info """
         c_name = c_id = att_name = att_val = kwargs = ''
 
+=======
+
+    def do_count(self, args):
+        """Count current number of class instances"""
+        count = 0
+        for k, v in storage.all().items():
+            if args == k.split('.')[0]:
+                count += 1
+        print(count)
+
+    def help_count(self):
+        """ """
+        print("Usage: count <class_name>")
+
+    def do_update(self, args):
+        """ Updates a certain object with new info """
+        c_name = c_id = att_name = att_val = kwargs = ''
+
+>>>>>>> e536e060ed498f588d8dc2607b073029dada3bf2
         # isolate cls from id/args, ex: (<cls>, delim, <id/args>)
         args = args.partition(" ")
         if args[0]:
