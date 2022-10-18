@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""This module instantiates an instance of the Storage will be used"""
-
+"""Instantiates a storage object
+-> If the environment variable 'HBNB_TYPE_STORAGE' is set to 'db',
+    instantiates to a database storage engine (DBStorage).
+-> Otherwise, instantiates a file storage engine (FileStorage)
+"""
 from os import getenv
 
 storage_type = getenv('HBNB_TYPE_STORAGE')
