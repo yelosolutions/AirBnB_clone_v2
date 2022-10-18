@@ -1,9 +1,9 @@
-## #0x04. AirBnB clone - Web framework
+# 0x04. AirBnB clone - Web framework
 
 GeeksforGeeks describes ‘web application frameworks’ or ‘web frameworks’ as “a software framework that is designed to support the development of web applications including web services, web resources and web APIs”.
 In simple words, web frameworks are a piece of software that offers a way to create and run web applications.
 
-## ##General Learning Objectives
+## General Learning Objectives
 
 - What is a Web Framework
 - How to build a web framework with Flask
